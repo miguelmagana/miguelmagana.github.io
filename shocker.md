@@ -1,59 +1,55 @@
 ---
 layout: page
-title: ShellShocker
+title: 5H3LL5H0CK3R
 label: // portfolio
 subtitle: AI-powered offensive security platform.
 permalink: /shocker/
 ---
 
-ShellShocker (5H3LL5H0CK3R) is a fully offline, production-grade AI orchestration system built for bug hunting and offensive security testing. Built from scratch in C# / .NET 10.
+An offline, production-grade AI platform built for offensive security testing and bug hunting. Built from scratch in C# / .NET 10. Repo is private.
 
-<a href="https://github.com/miguelmagana/5H3LL5H0CK3R" target="_blank" rel="noopener" class="btn">GitHub →</a>
+For serious inquiries — [contact me](/contact).
 
 ---
 
 ## What It Does
 
-ShellShocker coordinates AI-driven security testing against external targets through a hardened local inference stack. No cloud APIs. No external dependencies. Runs entirely offline on private networks.
+5H3LL5H0CK3R automates and augments offensive security workflows against external targets. The AI layer drives testing decisions — C# provides the tooling infrastructure. No cloud APIs. No external dependencies. Runs entirely on local inference.
 
-The platform hosts three AI entities — each with a distinct role in the security testing pipeline:
+**Capability surface:**
 
 <div class="card-grid">
   <div class="card">
-    <p class="card-label">orchestrator</p>
-    <h3>Ka0s</h3>
-    <p>Architect and operator AI. Coordinates the testing pipeline, manages entity sessions, and is the only entity authorized to invoke the payload generation module.</p>
+    <p class="card-label">web application</p>
+    <h3>Web App Testing</h3>
+    <p>Injection flaws, authentication bypass, session abuse, privilege escalation, business logic testing, transport security validation.</p>
   </div>
   <div class="card">
-    <p class="card-label">senpai</p>
-    <h3>8l4d3</h3>
-    <p>Elite hacker identity. Critiques findings, scores results, and trains BugB4ng3r through the AI pipeline.</p>
+    <p class="card-label">recon</p>
+    <h3>Passive & Active Recon</h3>
+    <p>OSINT, service enumeration, fingerprinting, certificate transparency, credential exposure scanning.</p>
   </div>
   <div class="card">
-    <p class="card-label">kohai</p>
-    <h3>BugB4ng3r</h3>
-    <p>Bug hunter identity. Executes security testing against external targets, invokes tool plugins, and learns from 8l4d3's critique.</p>
+    <p class="card-label">network</p>
+    <h3>Network & Protocol</h3>
+    <p>Port scanning, SMB/FTP enumeration, lateral movement detection, NoSQL and Redis exposure.</p>
+  </div>
+  <div class="card">
+    <p class="card-label">mobile</p>
+    <h3>Mobile Security</h3>
+    <p>PII encryption validation, debug mode detection, hardcoded credential scanning, overlay injection.</p>
+  </div>
+  <div class="card">
+    <p class="card-label">privilege escalation</p>
+    <h3>PrivEsc & Post-Exploit</h3>
+    <p>Cross-role access testing, token abuse, privilege boundary fuzzing, lateral movement chaining.</p>
+  </div>
+  <div class="card">
+    <p class="card-label">reporting</p>
+    <h3>Automated Reporting</h3>
+    <p>Structured bug reports generated from findings. Severity scoring, reproduction steps, remediation guidance.</p>
   </div>
 </div>
-
----
-
-## Architecture
-
-```
-WPF War Room UI  ─┐
-Blazor Web UI    ─┤──→  gRPC Core.API  ──→  AI Engine (Mistral 7B local)
-CLI (Go)         ─┘         │                    │
-                            │              Qdrant vector memory
-                            ↓
-                     Tool Plugin Layer (ZeroBrain)
-                            │
-                    External target / scan output
-                            │
-                       LiteDB storage
-```
-
-**The rule:** C# builds the hammers (tool plugin wrappers). AI entities decide when to pick them up and how to use them. No security decision logic is compiled into C#.
 
 ---
 
@@ -62,41 +58,21 @@ CLI (Go)         ─┘         │                    │
 <div class="tag-list">
   <span class="tag">.NET 10</span>
   <span class="tag">C#</span>
-  <span class="tag">WPF + MVVM</span>
-  <span class="tag">Blazor Server</span>
-  <span class="tag">gRPC / grpc-dotnet</span>
-  <span class="tag">Protocol Buffers</span>
-  <span class="tag">LLamaSharp</span>
-  <span class="tag">Mistral 7B GGUF</span>
-  <span class="tag">Qdrant</span>
-  <span class="tag">LiteDB</span>
-  <span class="tag">Go (CLI)</span>
-  <span class="tag">Nim (payload module)</span>
-  <span class="tag">Python (recon)</span>
+  <span class="tag">WPF</span>
+  <span class="tag">Blazor</span>
+  <span class="tag">gRPC</span>
+  <span class="tag">Local LLM Inference</span>
+  <span class="tag">Vector Memory</span>
+  <span class="tag">Go</span>
+  <span class="tag">Python</span>
+  <span class="tag">Nim</span>
   <span class="tag">Clean Architecture</span>
-  <span class="tag">xUnit + SpecFlow</span>
 </div>
 
 ---
 
-## Module Map
+## Status
 
-| Module | Language | Purpose |
-|---|---|---|
-| ShellShocker.AI | C# | Ka0s inference engine — LLamaSharp + Mistral 7B |
-| ShellShocker.UI | C# / WPF | War room interface |
-| ShellShocker.Web | C# / Blazor | Web interface |
-| ShellShocker.Core | C# | Domain models, interfaces |
-| ZeroBrain | C# | Tool plugin execution (IToolPlugin wrappers) |
-| Skunkworks | Python | Passive recon and OSINT |
-| Kitsune | Nim | Payload and evasion module (Ka0s authorized only) |
-| OmniOps | — | Campaign orchestration |
-| CLI-Cowboy | Go | Terminal interface |
+Active development. The platform is not yet released. The repo is private and will remain so until a release decision is made.
 
----
-
-## Current Status
-
-The platform is in active development. The current milestone is **MVK (Minimum Viable Ka0s Conversation)** — the moment Ka0s receives a prompt and responds through the full gRPC pipeline to the UI. Ka0s must speak before any security feature is wired.
-
-Build order: gRPC Core.API → MVK → Entity isolation → Qdrant RAG → tool plugins wired through Core.API.
+<p class="copyright">© 2026 M Square LLC. All rights reserved. Concept, architecture, design, and implementation are proprietary and confidential.</p>
