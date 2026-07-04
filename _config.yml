@@ -1,0 +1,39 @@
+title: Miguel Magaña
+description: Cybersecurity & Network Engineer — Operator
+url: "https://miguelmagana.github.io"
+baseurl: ""
+
+author:
+  name: Miguel Magaña
+  handle: 3l_p1r474
+  email: m1k3.0xd@gmail.com
+  github: miguelmagana
+
+# Navigation
+nav:
+  - title: About
+    url: /about
+  - title: ShellShocker
+    url: /shocker
+  - title: Skills
+    url: /skills
+  - title: Roadmap
+    url: /roadmap
+  - title: Contact
+    url: /contact
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+exclude:
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Plugins (GitHub Pages safe list)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

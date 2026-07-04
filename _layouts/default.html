@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}" class="nav-handle">{{ site.author.handle }}</a>
+    <ul>
+      {% for item in site.nav %}
+      <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <span>Miguel Magaña</span>
+    <span class="sep">·</span>
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+    <span class="sep">·</span>
+    <a href="https://msquarellc.net" target="_blank" rel="noopener">M Square LLC</a>
+  </footer>
+</body>
+</html>
