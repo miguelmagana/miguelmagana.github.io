@@ -53,24 +53,6 @@ For serious inquiries — [contact me](/contact).
 
 ---
 
-## Tech Stack
-
-<div class="tag-list">
-  <span class="tag">.NET 10</span>
-  <span class="tag">C#</span>
-  <span class="tag">WPF</span>
-  <span class="tag">Blazor</span>
-  <span class="tag">gRPC</span>
-  <span class="tag">Local LLM Inference</span>
-  <span class="tag">Vector Memory</span>
-  <span class="tag">Go</span>
-  <span class="tag">Python</span>
-  <span class="tag">Nim</span>
-  <span class="tag">Clean Architecture</span>
-</div>
-
----
-
 ## Status
 
 Active development. The platform is not yet released. The repo is private and will remain so until a release decision is made.
